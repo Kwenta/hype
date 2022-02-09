@@ -27,6 +27,7 @@ const PoolProgressContainer = styled.div`
   margin-top: 40px;
   margin-bottom: 40px;
   width: 100%;
+  max-width: 420px;
 `;
 
 const PoolProgressText = styled.div`
