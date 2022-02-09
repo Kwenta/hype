@@ -9,14 +9,20 @@
   },
   "dependencies": {
     "ethers": "^5.5.4",
+    "graphql-request": "^4.0.0",
     "next": "12.0.10",
+    "optimized-images-loader": "^0.4.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "react-query": "^3.34.14"
+    "react-optimized-image": "^0.4.1",
+    "react-query": "^3.34.14",
+    "styled-components": "^5.3.3"
   },
   "devDependencies": {
+    "@svgr/core": "^6.2.1",
     "@types/node": "17.0.16",
     "@types/react": "17.0.39",
+    "@types/styled-components": "^5.1.22",
     "eslint": "8.8.0",
     "eslint-config-next": "12.0.10",
     "typescript": "4.5.5"

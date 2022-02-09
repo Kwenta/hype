@@ -1,1 +1,1 @@
-export const KWENTA_AELIN_POOL = "0x";
+export const KWENTA_AELIN_POOL = "0xa436affafb2627e1d8a66b9910f15cd347093435";
