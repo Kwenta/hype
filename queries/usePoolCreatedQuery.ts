@@ -5,10 +5,10 @@ import { GRAPH_ENDPOINT_OPTIMISM } from "../constants/endpoints";
 
 const usePoolCreatedQuery = (options?: UseQueryOptions<any | null>) => {
   return useQuery<any | null>(
-    ["pool", "created"],
+    "poolCreated",
     async () => {
       try {
-        const response = await request(
+        const data = await request(
           GRAPH_ENDPOINT_OPTIMISM,
           gql`
             query PoolCreated($id: ID!) {
@@ -34,13 +34,7 @@ const usePoolCreatedQuery = (options?: UseQueryOptions<any | null>) => {
           { id: KWENTA_AELIN_POOL }
         );
 
-        const { data } = response;
-
-        if (data.errors && data.errors.length) {
-          throw new Error(data.errors[0].message);
-        }
-
-        return data;
+        return data.poolCreated ?? null;
       } catch (error) {
         console.log(error);
       }

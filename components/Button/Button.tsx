@@ -29,20 +29,26 @@ const Button = styled.button<ButtonProps>`
   white-space: nowrap;
   font-size: 17px;
 
-  color: ${(props) => props.theme.colors.common.primaryWhite};
-  border: ${(props) => props.theme.colors.selectedTheme.border};
-  background: ${(props) => props.theme.colors.selectedTheme.button.background};
-  box-shadow: ${(props) => props.theme.colors.selectedTheme.button.shadow};
+  color: #ece8e3;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: linear-gradient(180deg, #282727 0%, #191818 100%);
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25),
+    inset 0px 1px 0px rgba(255, 255, 255, 0.08),
+    inset 0px 0px 20px rgba(255, 255, 255, 0.03);
 
   &:hover {
-    background: ${(props) => props.theme.colors.selectedTheme.button.hover};
+    background: linear-gradient(
+      180deg,
+      #383838 0%,
+      #383838 0.01%,
+      #1e1e1e 100%
+    );
   }
 
   &:disabled {
-    color: ${(props) => props.theme.colors.selectedTheme.button.disabled.text};
-    border: ${(props) => props.theme.colors.selectedTheme.border};
-    background: ${(props) =>
-      props.theme.colors.selectedTheme.button.disabled.background};
+    color: #555555;
+    border: rgba(255, 255, 255, 0.1);
+    background: #272727;
     box-shadow: none;
     cursor: initial;
   }
@@ -50,35 +56,34 @@ const Button = styled.button<ButtonProps>`
   ${(props) =>
     props.mono
       ? css`
-          font-family: ${props.theme.fonts.mono};
+          font-family: AkkuratMonoLLWeb-Regular;
         `
       : css`
-          font-family: ${props.theme.fonts.bold};
+          font-family: AkkuratLLWeb-Bold;
         `};
 
   ${(props) =>
     props.variant === "primary" &&
     css`
-      background: ${props.theme.colors.selectedTheme.button.primary.background};
-      color: ${props.theme.colors.common.primaryWhite};
-      text-shadow: ${props.theme.colors.selectedTheme.button.primary
-        .textShadow};
+      background: linear-gradient(180deg, #be9461 0%, #9c6c3c 100%);
+      color: #ece8e3;
+      text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
 
       &:hover {
-        background: ${props.theme.colors.selectedTheme.button.primary.hover};
+        background: linear-gradient(180deg, #e4b378 0%, #b98c55 100%);
       }
     `};
 
   ${(props) =>
     props.variant === "secondary" &&
     css`
-      color: ${props.theme.colors.selectedTheme.button.secondary.text};
+      color: #c9975b;
     `};
 
   ${(props) =>
     props.variant === "danger" &&
     css`
-      color: ${props.theme.colors.common.primaryRed};
+      color: #ef6868;
     `};
 
   ${(props) =>
