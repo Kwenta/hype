@@ -18,7 +18,9 @@ const PoolProgress: React.FC<PoolProgressProps> = () => {
       <ProgressContainer>
         <div className="track" />
       </ProgressContainer>
-      <PoolProgressText>Pool Progress</PoolProgressText>
+      <PoolProgressText>
+        Pool Progress: <span>2.3M</span>/<span>5M</span> sUSD
+      </PoolProgressText>
     </PoolProgressContainer>
   );
 };
@@ -35,6 +37,10 @@ const PoolProgressText = styled.div`
   text-align: center;
   color: #787878;
   font-size: 15px;
+
+  span {
+    color: #ece8e3;
+  }
 `;
 
 const ProgressContainer = styled.div`
