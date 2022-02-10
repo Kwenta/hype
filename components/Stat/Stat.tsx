@@ -30,12 +30,20 @@ const Value = styled.div<{ $mono?: boolean }>`
     css`
       font-family: "AkkuratMonoLLWeb-Regular";
     `};
+
+  @media screen and (max-width: 480px) {
+    font-size: 33px;
+  }
 `;
 
 const Description = styled.div`
   font-size: 15px;
   text-transform: uppercase;
   color: #787878;
+
+  @media screen and (max-width: 480px) {
+    font-size: 13px;
+  }
 `;
 
 export default Stat;
