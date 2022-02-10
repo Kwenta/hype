@@ -8,10 +8,18 @@ import gitbookIcon from "../../assets/gitbook.svg";
 
 const Icons: React.FC = () => (
   <IconsContainer>
-    <Image alt="twitter" src={twitterIcon} />
-    <Image alt="gitbook" src={gitbookIcon} />
-    <Image alt="discord" src={discordIcon} />
-    <Image alt="github" src={githubIcon} />
+    <a href="https://twitter.com/kwenta_io" target="_blank" rel="noreferrer">
+      <Image alt="twitter" src={twitterIcon} />
+    </a>
+    <a href="https://docs.kwenta.io" target="_blank" rel="noreferrer">
+      <Image alt="gitbook" src={gitbookIcon} />
+    </a>
+    <a href="https://discord.gg/kwenta" target="_blank" rel="noreferrer">
+      <Image alt="discord" src={discordIcon} />
+    </a>
+    <a href="https://github.com/Kwenta" target="_blank" rel="noreferrer">
+      <Image alt="github" src={githubIcon} />
+    </a>
   </IconsContainer>
 );
 
