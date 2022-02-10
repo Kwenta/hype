@@ -24,6 +24,11 @@ const Description = styled.p`
   text-align: center;
   max-width: 484px;
   width: 100%;
+
+  @media screen and (max-width: 480px) {
+    font-size: 15px;
+    margin-top: -24px;
+  }
 `;
 
 export default Heading;
