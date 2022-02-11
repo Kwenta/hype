@@ -30,6 +30,11 @@ const PoolProgressContainer = styled.div`
   margin-bottom: 30px;
   width: 100%;
   max-width: 420px;
+
+  @media screen and (max-width: 480px) {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
 `;
 
 const PoolProgressText = styled.div`

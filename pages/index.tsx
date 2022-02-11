@@ -11,6 +11,7 @@ import NeonIcon from "../components/NeonIcon";
 import TopBar from "../sections/TopBar";
 import EdgeTexts from "../sections/EdgeTexts";
 import BottomBar from "../sections/BottomBar";
+import MobileBottomBar from "../sections/MobileBottomBar";
 
 const Home: NextPage = () => {
   return (
@@ -31,6 +32,7 @@ const Home: NextPage = () => {
         <Stats />
         <PoolProgress />
         <CTA />
+        <MobileBottomBar />
       </StyledMain>
 
       <BottomBar />

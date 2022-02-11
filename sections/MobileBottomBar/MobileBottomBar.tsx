@@ -1,30 +1,28 @@
 import Image from "next/image";
 import styled from "styled-components";
 
+import Icons from "../../components/Icons";
 import synthetixLogo from "../../assets/synthetix.svg";
 
-const BottomBar: React.FC = () => {
+const MobileBottomBar = () => {
   return (
-    <BottomBarContainer>
+    <Container>
       <PoweredBySynthetix>
         <p>Powered By</p>
         <Image alt="Synthetix" src={synthetixLogo} />
       </PoweredBySynthetix>
-      <OneOfSix>One of Six</OneOfSix>
-    </BottomBarContainer>
+      <Icons />
+    </Container>
   );
 };
 
-const BottomBarContainer = styled.div`
-  width: 100%;
-  display: flex;
-  position: absolute;
-  bottom: 0;
-  padding: 0 40px 40px;
-  justify-content: space-between;
+const Container = styled.div`
+  flex-direction: column;
+  padding: 20px 40px 0;
+  justify-content: center;
   align-items: center;
 
-  @media screen and (max-width: 480px) {
+  @media screen and (min-width: 481px) {
     display: none;
   }
 `;
@@ -32,24 +30,19 @@ const BottomBarContainer = styled.div`
 const PoweredBySynthetix = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: center;
+  margin-bottom: 16px;
 
   p {
     margin: 0;
-    margin-bottom: 2px;
     font-size: 10px;
     text-transform: uppercase;
     color: #ece8e3;
     letter-spacing: 0.64px;
     opacity: 0.5;
+    text-align: center;
+    margin-bottom: 4px;
   }
 `;
 
-const OneOfSix = styled.div`
-  font-size: 15.5px;
-  letter-spacing: 4px;
-  font-family: "AkkuratLLWeb-Bold";
-  color: #787878;
-  text-transform: uppercase;
-`;
-
-export default BottomBar;
+export default MobileBottomBar;
