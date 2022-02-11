@@ -33,22 +33,22 @@ const EdgeText = styled.p<{ $vertical?: boolean }>`
 `;
 
 const TopEdgeText = styled(EdgeText)`
-  top: 20px;
+  top: 45px;
   margin: 0 auto;
 `;
 
 const RightEdgeText = styled(EdgeText)`
-  right: 20px;
+  right: 45px;
   margin: auto 0;
 `;
 
 const BottomEdgeText = styled(EdgeText)`
-  bottom: 20px;
+  bottom: 45px;
   margin: 0 auto;
 `;
 
 const LeftEdgeText = styled(EdgeText)`
-  left: 20px;
+  left: 45px;
   margin: auto 0;
 `;
 

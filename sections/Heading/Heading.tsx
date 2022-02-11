@@ -1,21 +1,15 @@
 import styled from "styled-components";
-import Image from "next/image";
 
-import communityRaise from "../../assets/community-raise.svg";
-
-const Heading = () => {
-  return (
-    <>
-      <Title style={{ margin: "32px 0 0" }}>Kwenta</Title>
-      <Title style={{ marginBottom: 15 }}>Community Raise</Title>
-      {/* <Image alt="Kwenta Community Raise" src={communityRaise} /> */}
-      <Description>
-        Fund the Kwenta DAO and receive vKWENTA, redeemable for KWENTA at launch
-        on April 4th 2022.
-      </Description>
-    </>
-  );
-};
+const Heading = () => (
+  <>
+    <Title style={{ margin: "32px 0 0" }}>Kwenta</Title>
+    <Title style={{ marginBottom: 15 }}>Community Raise</Title>
+    <Description>
+      Fund the Kwenta DAO and receive vKWENTA, redeemable for KWENTA at launch
+      on April 4th 2022.
+    </Description>
+  </>
+);
 
 const Title = styled.h1`
   font-family: "GT-America-Compressed-Black";
@@ -31,7 +25,6 @@ const Title = styled.h1`
 `;
 
 const Description = styled.p`
-  /* margin-top: -36px; */
   margin-bottom: 32px;
   font-size: 20px;
   line-height: 20px;
