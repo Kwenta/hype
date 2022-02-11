@@ -14,10 +14,10 @@ const EdgeTexts = () => {
 const EdgeText = styled.p<{ $vertical?: boolean }>`
   font-size: 17px;
   font-family: "AkkuratLLWeb-Bold";
-  letter-spacing: 2px;
+  letter-spacing: 12px;
   position: absolute;
   text-transform: uppercase;
-  color: #787878;
+  color: #87827c;
 
   @media screen and (max-width: 1150px) {
     display: none;

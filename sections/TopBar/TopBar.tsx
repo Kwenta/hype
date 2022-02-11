@@ -28,7 +28,7 @@ const MobileContainer = styled.div`
 `;
 
 const DesktopContainer = styled.div`
-  padding: 20px 40px 0;
+  padding: 40px 40px 0;
   justify-content: space-between;
 `;
 
