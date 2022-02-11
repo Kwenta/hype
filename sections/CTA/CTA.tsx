@@ -14,6 +14,10 @@ const CTAContainer = styled.div`
   display: flex;
   margin: 0 auto;
 
+  @media screen and (min-width: 480px) {
+    margin-bottom: 24px;
+  }
+
   button {
     min-width: 157px;
   }
