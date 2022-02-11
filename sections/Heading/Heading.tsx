@@ -6,7 +6,7 @@ const Heading = () => (
     <Title style={{ marginBottom: 15 }}>Community Raise</Title>
     <Description>
       Fund the Kwenta DAO and receive vKWENTA, redeemable for KWENTA at launch
-      on April 4th 2022.
+      in April 2022.
     </Description>
   </>
 );

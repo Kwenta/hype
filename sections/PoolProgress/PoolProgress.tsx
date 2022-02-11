@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
+import { ethers } from "ethers";
 import usePoolCreatedQuery from "../../queries/usePoolCreatedQuery";
+import usePoolBalancesQuery from "../../queries/usePoolBalancesQuery";
 import { parsePool } from "../../utils/pools";
 
 type PoolProgressProps = {};
@@ -13,10 +15,33 @@ const PoolProgress: React.FC<PoolProgressProps> = () => {
     [poolQuery?.data]
   );
 
+  const poolBalancesQuery = usePoolBalancesQuery({
+    poolAddress: pool?.id ?? null,
+    purchaseToken: pool?.purchaseToken ?? null,
+  });
+
+  const poolBalances = poolBalancesQuery?.data ?? null;
+  const purchaseTokenDecimals = poolBalances?.purchaseTokenDecimals ?? null;
+
+  const poolProgressPercent = React.useMemo(() => {
+    ethers.utils
+      .formatUnits(
+        pool?.contributions.toString() ?? "0",
+        purchaseTokenDecimals ?? 0
+      )
+      .toString();
+    return 0;
+  }, [pool, purchaseTokenDecimals]);
+
   return (
     <PoolProgressContainer>
       <ProgressContainer>
-        <div className="track" />
+        <div
+          className="track"
+          style={{
+            width: `${poolProgressPercent > 100 ? 100 : poolProgressPercent}%`,
+          }}
+        />
       </ProgressContainer>
       <PoolProgressText>
         Pool Progress: <span>2.3M</span>/<span>5M</span> sUSD
