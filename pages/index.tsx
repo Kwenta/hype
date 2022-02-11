@@ -9,6 +9,7 @@ import Stats from "../sections/Stats";
 import CTA from "../sections/CTA";
 import NeonIcon from "../components/NeonIcon/NeonIcon";
 import TopBar from "../sections/TopBar/TopBar";
+import EdgeTexts from "../sections/EdgeTexts";
 
 const Home: NextPage = () => {
   return (
@@ -21,6 +22,7 @@ const Home: NextPage = () => {
       </Head>
 
       <TopBar />
+      <EdgeTexts />
 
       <StyledMain>
         <NeonIcon />
