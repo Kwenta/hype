@@ -1,14 +1,21 @@
 import styled from "styled-components";
 import Button from "../../components/Button";
+import { KWENTA_AELIN_POOL } from "../../constants/addresses";
 
-const CTA = () => {
-  return (
-    <CTAContainer>
+const CTA: React.FC = () => (
+  <CTAContainer>
+    <a href="https://docs.kwenta.io" target="_blank" rel="noreferrer">
       <Button variant="secondary">Learn More</Button>
+    </a>
+    <a
+      href={`https://aelin.xyz/pools/${KWENTA_AELIN_POOL}`}
+      target="_blank"
+      rel="noreferrer"
+    >
       <Button variant="primary">Aelin Pool</Button>
-    </CTAContainer>
-  );
-};
+    </a>
+  </CTAContainer>
+);
 
 const CTAContainer = styled.div`
   display: flex;
@@ -22,7 +29,7 @@ const CTAContainer = styled.div`
     min-width: 157px;
   }
 
-  button:not(:last-of-type) {
+  a:not(:last-of-type) {
     margin-right: 20px;
   }
 `;
