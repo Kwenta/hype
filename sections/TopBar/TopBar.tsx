@@ -6,21 +6,17 @@ import Icons from "../../components/Icons";
 import kwentaLogo from "../../assets/kwenta.svg";
 import kwentaLogo2 from "../../assets/kwenta-logo-2.svg";
 
-type TopBarProps = {};
-
-const TopBar: React.FC<TopBarProps> = () => {
-  return (
-    <TopBarContainer className="topBar">
-      <DesktopContainer>
-        <Image alt="Kwenta" src={kwentaLogo} />
-        <Icons />
-      </DesktopContainer>
-      <MobileContainer>
-        <Image alt="Kwenta" src={kwentaLogo2} />
-      </MobileContainer>
-    </TopBarContainer>
-  );
-};
+const TopBar: React.FC = () => (
+  <TopBarContainer className="topBar">
+    <DesktopContainer>
+      <Image alt="Kwenta" src={kwentaLogo} />
+      <Icons />
+    </DesktopContainer>
+    <MobileContainer>
+      <Image alt="Kwenta" src={kwentaLogo2} />
+    </MobileContainer>
+  </TopBarContainer>
+);
 
 const MobileContainer = styled.div`
   padding: 20px 40px 0;
@@ -35,6 +31,8 @@ const DesktopContainer = styled.div`
 const TopBarContainer = styled.div`
   width: 100%;
   display: flex;
+  position: absolute;
+  top: 0;
 
   & > div {
     display: flex;

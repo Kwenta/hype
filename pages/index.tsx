@@ -7,9 +7,10 @@ import Heading from "../sections/Heading";
 import PoolProgress from "../sections/PoolProgress";
 import Stats from "../sections/Stats";
 import CTA from "../sections/CTA";
-import NeonIcon from "../components/NeonIcon/NeonIcon";
-import TopBar from "../sections/TopBar/TopBar";
+import NeonIcon from "../components/NeonIcon";
+import TopBar from "../sections/TopBar";
 import EdgeTexts from "../sections/EdgeTexts";
+import BottomBar from "../sections/BottomBar";
 
 const Home: NextPage = () => {
   return (
@@ -31,6 +32,8 @@ const Home: NextPage = () => {
         <PoolProgress />
         <CTA />
       </StyledMain>
+
+      <BottomBar />
     </PageContainer>
   );
 };
@@ -38,7 +41,6 @@ const Home: NextPage = () => {
 const PageContainer = styled.div`
   height: 100vh;
   width: 100vw;
-  background-color: #131212;
   display: flex;
   flex-direction: column;
   align-items: center;

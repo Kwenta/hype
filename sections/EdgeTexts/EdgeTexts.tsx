@@ -18,6 +18,7 @@ const EdgeText = styled.p<{ $vertical?: boolean }>`
   position: absolute;
   text-transform: uppercase;
   color: #87827c;
+  pointer-events: none;
 
   @media screen and (max-width: 1150px) {
     display: none;

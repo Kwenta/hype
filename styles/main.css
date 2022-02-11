@@ -46,6 +46,14 @@ body {
 	scroll-behavior: smooth;
 	font-size: 12px;
 	line-height: 140%;
+	background: url(/images/BG-Lines-Glow.png) no-repeat;
+	background-size: 100% 100%;
+}
+
+@media screen and (max-width: 1150px) {
+	body {
+		background: #131212;
+	}
 }
 
 ul {
