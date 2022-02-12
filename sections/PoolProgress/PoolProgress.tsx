@@ -5,9 +5,7 @@ import usePoolCreatedQuery from "../../queries/usePoolCreatedQuery";
 import usePoolBalancesQuery from "../../queries/usePoolBalancesQuery";
 import { parsePool } from "../../utils/pools";
 
-type PoolProgressProps = {};
-
-const PoolProgress: React.FC<PoolProgressProps> = () => {
+const PoolProgress: React.FC = () => {
   const poolQuery = usePoolCreatedQuery();
 
   const pool = React.useMemo(
@@ -30,6 +28,7 @@ const PoolProgress: React.FC<PoolProgressProps> = () => {
         purchaseTokenDecimals ?? 0
       )
       .toString();
+
     return 0;
   }, [pool, purchaseTokenDecimals]);
 
