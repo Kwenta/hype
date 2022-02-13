@@ -1,7 +1,7 @@
 export const transformToMetric = (value: number, args: number) => {
   const suffixes = ["K", "M", "B"];
 
-  if (!value) return null;
+  if (!value) return 0;
 
   if (Number.isNaN(value)) return null;
 

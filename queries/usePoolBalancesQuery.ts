@@ -13,9 +13,9 @@ type PoolBalances = {
   totalSupply: number;
 };
 
-const provider = new ethers.providers.InfuraProvider(
+const provider = new ethers.providers.AlchemyProvider(
   10,
-  process.env.NEXT_PUBLIC_INFURA_PROJECT_ID
+  process.env.NEXT_PUBLIC_ALCHEMY_PROJECT_ID
 );
 
 const usePoolBalancesQuery = () => {
