@@ -51,6 +51,14 @@ const Button = styled.button<ButtonProps>`
     background: #272727;
     box-shadow: none;
     cursor: initial;
+
+    &:hover {
+      color: #555555;
+      border: rgba(255, 255, 255, 0.1);
+      background: #272727;
+      box-shadow: none;
+      cursor: default;
+    }
   }
 
   ${(props) =>

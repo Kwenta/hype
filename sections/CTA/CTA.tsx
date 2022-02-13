@@ -4,7 +4,11 @@ import { KWENTA_AELIN_POOL } from "../../constants/addresses";
 
 const CTA: React.FC = () => (
   <CTAContainer>
-    <a href="https://docs.kwenta.io" target="_blank" rel="noreferrer">
+    <a
+      href="https://docs.kwenta.io/tokenomics/sovereignty/aelin-raise"
+      target="_blank"
+      rel="noreferrer"
+    >
       <Button variant="secondary">Learn More</Button>
     </a>
     <a
@@ -12,7 +16,9 @@ const CTA: React.FC = () => (
       target="_blank"
       rel="noreferrer"
     >
-      <Button variant="primary">Aelin Pool</Button>
+      <Button variant="primary" disabled>
+        Aelin Pool
+      </Button>
     </a>
   </CTAContainer>
 );
