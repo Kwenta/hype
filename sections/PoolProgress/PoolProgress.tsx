@@ -1,36 +1,20 @@
 import React from "react";
 import styled from "styled-components";
-import { ethers } from "ethers";
-import usePoolCreatedQuery from "../../queries/usePoolCreatedQuery";
 import usePoolBalancesQuery from "../../queries/usePoolBalancesQuery";
-import { parsePool } from "../../utils/pools";
+import { transformToMetric } from "../../utils/numbers";
 
 const PoolProgress: React.FC = () => {
-  const poolQuery = usePoolCreatedQuery();
+  const poolBalancesQuery = usePoolBalancesQuery();
+  const poolBalances = poolBalancesQuery?.data ?? null;
 
-  const pool = React.useMemo(
-    () => ((poolQuery.data ?? null) != null ? parsePool(poolQuery.data) : null),
-    [poolQuery?.data]
+  const poolProgress = React.useMemo(
+    () => poolBalances?.totalSupply ?? 0,
+    [poolBalances]
   );
 
-  const poolBalancesQuery = usePoolBalancesQuery({
-    poolAddress: pool?.id ?? null,
-    purchaseToken: pool?.purchaseToken ?? null,
-  });
-
-  const poolBalances = poolBalancesQuery?.data ?? null;
-  const purchaseTokenDecimals = poolBalances?.purchaseTokenDecimals ?? null;
-
   const poolProgressPercent = React.useMemo(() => {
-    ethers.utils
-      .formatUnits(
-        pool?.contributions.toString() ?? "0",
-        purchaseTokenDecimals ?? 0
-      )
-      .toString();
-
-    return 0;
-  }, [pool, purchaseTokenDecimals]);
+    return Number(((poolProgress ?? 0) / 5000000).toFixed(2)) * 100;
+  }, [poolProgress]);
 
   return (
     <PoolProgressContainer>
@@ -43,7 +27,8 @@ const PoolProgress: React.FC = () => {
         />
       </ProgressContainer>
       <PoolProgressText>
-        Pool Progress: <span>2.3M</span>/<span>5M</span> sUSD
+        Pool Progress: <span>{transformToMetric(poolProgress, 2)}</span>/
+        <span>5M</span> sUSD
       </PoolProgressText>
     </PoolProgressContainer>
   );
@@ -86,6 +71,7 @@ const ProgressContainer = styled.div`
 
   .track {
     height: 100%;
+    min-width: 2%;
     border-radius: 7px;
     background: #c9975b;
     box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.4),

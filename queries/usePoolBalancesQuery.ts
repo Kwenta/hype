@@ -2,6 +2,7 @@ import { ethers } from "ethers";
 import poolAbi from "../lib/abis/AelinPool";
 import { erc20Abi } from "../lib/abis/ERC20";
 import { useQuery } from "react-query";
+import { KWENTA_AELIN_POOL, OPTIMISM_SUSD } from "../constants/addresses";
 
 type PoolBalances = {
   purchaseTokenDecimals: number;
@@ -17,19 +18,18 @@ const provider = new ethers.providers.InfuraProvider(
   process.env.NEXT_PUBLIC_INFURA_PROJECT_ID
 );
 
-const usePoolBalancesQuery = ({
-  purchaseToken,
-  poolAddress,
-}: {
-  purchaseToken: string | null;
-  poolAddress: string | null;
-}) => {
+const usePoolBalancesQuery = () => {
   return useQuery<PoolBalances>(
-    ["poolBalances", purchaseToken, poolAddress],
+    ["poolBalances"],
     async () => {
-      const poolContract = new ethers.Contract(poolAddress!, poolAbi, provider);
+      const poolContract = new ethers.Contract(
+        KWENTA_AELIN_POOL,
+        poolAbi,
+        provider
+      );
+
       const tokenContract = new ethers.Contract(
-        purchaseToken!,
+        OPTIMISM_SUSD,
         erc20Abi,
         provider
       );
@@ -66,9 +66,7 @@ const usePoolBalancesQuery = ({
         ),
       };
     },
-    {
-      enabled: !!purchaseToken && !!poolAddress && !!provider,
-    }
+    { enabled: !!provider }
   );
 };
 

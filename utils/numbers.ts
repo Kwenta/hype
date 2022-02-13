@@ -1,22 +1,16 @@
-const numberWithCommas = (value: string, decimals?: number) => {
-  var parts = value.split(".");
-  parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-  if (decimals != null && decimals > 0 && (parts[1]?.length ?? 0) > decimals) {
-    parts[1] = parts[1].slice(0, decimals);
-  }
-  return parts.join(".");
-};
+export const transformToMetric = (value: number, args: number) => {
+  const suffixes = ["K", "M", "B"];
 
-// To be augmented for when we have WEI support
-export const formatNumber = (value: number | string, decimals?: number) => {
-  return numberWithCommas(value.toString(), decimals);
-};
+  if (!value) return null;
 
-export const truncateNumber = (number: number, first = 5, last = 5) => {
-  const formattedNumber = formatNumber(number);
-  return formattedNumber.toString().length > 16
-    ? `${String(formattedNumber).slice(0, first)}...${String(
-        formattedNumber
-      ).slice(-last, String(formattedNumber).length)}`
-    : formattedNumber;
+  if (Number.isNaN(value)) return null;
+
+  if (value < 1000) return value;
+
+  const exp = Math.floor(Math.log(value) / Math.log(1000));
+
+  const returnValue =
+    (value / Math.pow(1000, exp)).toFixed(args) + suffixes[exp - 1];
+
+  return returnValue;
 };
