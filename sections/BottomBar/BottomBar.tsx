@@ -11,10 +11,7 @@ const BottomBar: React.FC = () => {
         <Image alt="Synthetix" src={synthetixLogo} />
       </PoweredBySynthetix>
       <OneOfSix>
-        One 
-        <span>
-          of Six
-        </span>
+        <p>One<span> of Six</span></p>
       </OneOfSix>
     </BottomBarContainer>
   );
@@ -50,11 +47,15 @@ const PoweredBySynthetix = styled.div`
 `;
 
 const OneOfSix = styled.div`
-  font-size: 13px;
-  letter-spacing: 4px;
-  font-family: "AkkuratLLWeb-Bold";
-  color: #787878;
-  text-transform: uppercase;
+  p {
+    margin: 0px;
+    font-size: 13px;
+    letter-spacing: 4px;
+    font-family: "AkkuratLLWeb-Bold";
+    color: #787878;
+    text-transform: uppercase;  
+  }
+  
 
   span {
     color: #39332D;
