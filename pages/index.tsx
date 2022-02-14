@@ -73,11 +73,11 @@ const StyledMain = styled.main`
 `;
 
 const Disclaimer = styled.div`
-  font-size: 15px;
-  line-height: 20px;
-  color: #787878;
+  font-size: 13px;
+  line-height: 15px;
+  color: #515151;
   text-align: center;
-  max-width: 484px;
+  max-width: 370px;
   width: 100%;
 
   @media screen and (max-width: 480px) {
