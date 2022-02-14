@@ -16,9 +16,7 @@ const CTA: React.FC = () => (
       target="_blank"
       rel="noreferrer"
     >
-      <Button variant="primary" disabled>
-        Aelin Pool
-      </Button>
+      <Button variant="primary">Aelin Pool</Button>
     </a>
   </CTAContainer>
 );
