@@ -10,7 +10,12 @@ const BottomBar: React.FC = () => {
         <p>Powered By</p>
         <Image alt="Synthetix" src={synthetixLogo} />
       </PoweredBySynthetix>
-      <OneOfSix>One of Six</OneOfSix>
+      <OneOfSix>
+        One 
+        <span>
+          of Six
+        </span>
+      </OneOfSix>
     </BottomBarContainer>
   );
 };
@@ -22,7 +27,7 @@ const BottomBarContainer = styled.div`
   bottom: 0;
   padding: 0 40px 40px;
   justify-content: space-between;
-  align-items: center;
+  align-items: end;
 
   @media screen and (max-width: 480px) {
     display: none;
@@ -32,10 +37,10 @@ const BottomBarContainer = styled.div`
 const PoweredBySynthetix = styled.div`
   display: flex;
   flex-direction: column;
+  width: 130px;
 
   p {
-    margin: 0;
-    margin-bottom: 2px;
+    margin: 0px;
     font-size: 10px;
     text-transform: uppercase;
     color: #ece8e3;
@@ -45,11 +50,15 @@ const PoweredBySynthetix = styled.div`
 `;
 
 const OneOfSix = styled.div`
-  font-size: 15.5px;
+  font-size: 13px;
   letter-spacing: 4px;
   font-family: "AkkuratLLWeb-Bold";
   color: #787878;
   text-transform: uppercase;
+
+  span {
+    color: #39332D;
+  }
 `;
 
 export default BottomBar;
