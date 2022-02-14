@@ -5,7 +5,7 @@ const Stats = () => {
   return (
     <StatsContainer>
       <Stat value="FEB 14" description="Pool Launch" align="right" />
-      <Stat value="FEB 28" description="Pool Close" align="left" />
+      <Stat value="FEB 27" description="Pool Close" align="left" />
       <Stat value="0" description="Vesting Period" mono align="right" />
       <Stat value="5m" description="sUSD Pool Goal" mono align="left" />
       <Stat value="5%" description="Of Total Supply" mono align="right" />
