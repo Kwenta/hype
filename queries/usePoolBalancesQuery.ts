@@ -1,15 +1,9 @@
 import { ethers } from "ethers";
 import poolAbi from "../lib/abis/AelinPool";
-import { erc20Abi } from "../lib/abis/ERC20";
 import { useQuery } from "react-query";
-import { KWENTA_AELIN_POOL, OPTIMISM_SUSD } from "../constants/addresses";
+import { KWENTA_AELIN_POOL } from "../constants/addresses";
 
 type PoolBalances = {
-  purchaseTokenDecimals: number;
-  purchaseTokenSymbol: string;
-  isPrivatePool: boolean;
-  totalAmountAccepted: string;
-  totalAmountWithdrawn: string;
   totalSupply: number;
 };
 
@@ -28,41 +22,16 @@ const usePoolBalancesQuery = () => {
         provider
       );
 
-      const tokenContract = new ethers.Contract(
-        OPTIMISM_SUSD,
-        erc20Abi,
-        provider
-      );
+      const results = await Promise.allSettled([poolContract.totalSupply()]);
 
-      const results = await Promise.allSettled([
-        tokenContract.decimals(),
-        tokenContract.symbol(),
-        poolContract.hasAllowList(),
-        poolContract.totalAmountAccepted(),
-        poolContract.totalAmountWithdrawn(),
-        poolContract.totalSupply(),
-      ]);
-
-      const [
-        decimals,
-        symbol,
-        hasAllowList,
-        totalAmountAccepted,
-        totalAmountWithdrawn,
-        unformattedTotalSupply,
-      ] = results.map((result) => {
+      const [unformattedTotalSupply] = results.map((result) => {
         if (result.status === "fulfilled") return result.value;
         if (result.status === "rejected") return 0;
       });
 
       return {
-        purchaseTokenDecimals: decimals,
-        purchaseTokenSymbol: symbol,
-        isPrivatePool: hasAllowList,
-        totalAmountAccepted: totalAmountAccepted.toString(),
-        totalAmountWithdrawn: totalAmountWithdrawn.toString(),
         totalSupply: Number(
-          ethers.utils.formatUnits(unformattedTotalSupply, decimals)
+          ethers.utils.formatUnits(unformattedTotalSupply, 18)
         ),
       };
     },
