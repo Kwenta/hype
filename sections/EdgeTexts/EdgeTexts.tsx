@@ -33,7 +33,7 @@ const EdgeText = styled.p<{ $vertical?: boolean }>`
 `;
 
 const TopEdgeText = styled(EdgeText)`
-  top: 35px;
+  top: 40px;
   margin: 0 auto;
 `;
 
