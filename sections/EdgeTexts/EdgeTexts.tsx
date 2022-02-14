@@ -12,7 +12,7 @@ const EdgeTexts = () => {
 };
 
 const EdgeText = styled.p<{ $vertical?: boolean }>`
-  font-size: 17px;
+  font-size: 12px;
   font-family: "AkkuratLLWeb-Bold";
   letter-spacing: 12px;
   position: absolute;
@@ -33,22 +33,22 @@ const EdgeText = styled.p<{ $vertical?: boolean }>`
 `;
 
 const TopEdgeText = styled(EdgeText)`
-  top: 45px;
+  top: 35px;
   margin: 0 auto;
 `;
 
 const RightEdgeText = styled(EdgeText)`
-  right: 45px;
+  right: 35px;
   margin: auto 0;
 `;
 
 const BottomEdgeText = styled(EdgeText)`
-  bottom: 45px;
+  bottom: 35px;
   margin: 0 auto;
 `;
 
 const LeftEdgeText = styled(EdgeText)`
-  left: 45px;
+  left: 35px;
   margin: auto 0;
 `;
 

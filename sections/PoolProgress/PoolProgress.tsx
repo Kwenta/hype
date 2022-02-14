@@ -50,7 +50,7 @@ const PoolProgressText = styled.div`
   text-transform: uppercase;
   text-align: center;
   color: #787878;
-  font-size: 15px;
+  font-size: 12px;
 
   span {
     color: #ece8e3;

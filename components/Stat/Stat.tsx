@@ -21,7 +21,7 @@ const StatContainer = styled.div<{ $align: "left" | "right" }>`
 `;
 
 const Value = styled.div<{ $mono?: boolean }>`
-  font-size: 38px;
+  font-size: 30px;
   color: #ece8e3;
   margin-bottom: 12px;
 
@@ -32,17 +32,17 @@ const Value = styled.div<{ $mono?: boolean }>`
     `};
 
   @media screen and (max-width: 480px) {
-    font-size: 33px;
+    font-size: 30px;
   }
 `;
 
 const Description = styled.div`
-  font-size: 15px;
+  font-size: 12px;
   text-transform: uppercase;
   color: #787878;
 
   @media screen and (max-width: 480px) {
-    font-size: 13px;
+    font-size: 12px;
   }
 `;
 

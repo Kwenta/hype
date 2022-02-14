@@ -14,7 +14,7 @@ const Heading = () => (
 const Title = styled.h1`
   font-family: "GT-America-Compressed-Black";
   color: #c9975b;
-  font-size: 62px;
+  font-size: 52px;
   text-align: center;
   text-shadow: 0px 0px 61.4174px rgba(208, 168, 117, 0.35);
   text-transform: uppercase;
@@ -26,7 +26,7 @@ const Title = styled.h1`
 
 const Description = styled.p`
   margin-bottom: 32px;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 20px;
   color: #787878;
   text-align: center;
@@ -34,7 +34,7 @@ const Description = styled.p`
   width: 100%;
 
   @media screen and (max-width: 480px) {
-    font-size: 15px;
+    font-size: 16px;
     max-width: 300px;
   }
 `;
