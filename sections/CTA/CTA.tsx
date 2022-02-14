@@ -24,9 +24,10 @@ const CTA: React.FC = () => (
 const CTAContainer = styled.div`
   display: flex;
   margin: 0 auto;
+  margin-bottom: 8px;
 
   @media screen and (min-width: 480px) {
-    margin-bottom: 24px;
+    margin-bottom: 16px;
   }
 
   button {

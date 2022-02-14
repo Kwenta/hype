@@ -32,6 +32,10 @@ const Home: NextPage = () => {
         <Stats />
         <PoolProgress />
         <CTA />
+        <Disclaimer>
+          You may need to switch your Metamask to the Optimism network for the
+          pool to be displayed correctly.
+        </Disclaimer>
         <MobileBottomBar />
       </StyledMain>
 
@@ -66,6 +70,19 @@ const StyledMain = styled.main`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+`;
+
+const Disclaimer = styled.div`
+  font-size: 15px;
+  line-height: 20px;
+  color: #787878;
+  text-align: center;
+  max-width: 484px;
+  width: 100%;
+
+  @media screen and (max-width: 480px) {
+    max-width: 300px;
+  }
 `;
 
 export default Home;
