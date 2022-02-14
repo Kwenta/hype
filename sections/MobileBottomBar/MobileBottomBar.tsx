@@ -18,7 +18,7 @@ const MobileBottomBar = () => {
 
 const Container = styled.div`
   flex-direction: column;
-  padding: 20px 40px 0;
+  padding: 20px 40px;
   justify-content: center;
   align-items: center;
 
