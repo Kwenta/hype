@@ -29,7 +29,7 @@ const Stats = () => {
 const StatsContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 22px;
+  grid-gap: 20px;
 `;
 
 export default Stats;
