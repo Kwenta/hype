@@ -23,7 +23,7 @@ const StatContainer = styled.div<{ $align: "left" | "right" }>`
 const Value = styled.div<{ $mono?: boolean }>`
   font-size: 30px;
   color: #ece8e3;
-  margin-bottom: 12px;
+  margin-bottom: 5px;
 
   ${(props) =>
     props.$mono &&
