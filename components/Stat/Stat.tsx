@@ -4,13 +4,20 @@ type StatProps = {
   value: string;
   description: string;
   mono?: boolean;
+  noUppercase?: boolean;
   align: "left" | "right";
 };
 
-const Stat: React.FC<StatProps> = ({ value, description, mono, align }) => (
+const Stat: React.FC<StatProps> = ({
+  value,
+  description,
+  mono,
+  noUppercase,
+  align,
+}) => (
   <StatContainer $align={align}>
     <Value $mono={mono}>{value}</Value>
-    <Description>{description}</Description>
+    <Description $noUppercase={noUppercase}>{description}</Description>
   </StatContainer>
 );
 
@@ -36,7 +43,7 @@ const Value = styled.div<{ $mono?: boolean }>`
   }
 `;
 
-const Description = styled.div`
+const Description = styled.div<{ $noUppercase?: boolean }>`
   font-size: 12px;
   text-transform: uppercase;
   color: #787878;
@@ -44,6 +51,12 @@ const Description = styled.div`
   @media screen and (max-width: 480px) {
     font-size: 12px;
   }
+
+  ${(props) =>
+    props.$noUppercase &&
+    css`
+      text-transform: initial;
+    `}
 `;
 
 export default Stat;
