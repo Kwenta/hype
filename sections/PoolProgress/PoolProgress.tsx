@@ -27,8 +27,9 @@ const PoolProgress: React.FC = () => {
         />
       </ProgressContainer>
       <PoolProgressText>
-        Pool Progress: <span>{transformToMetric(poolProgress, 2)}</span>/
-        <span>5M</span> sUSD
+        Pool Progress:{" "}
+        <span className="value">{transformToMetric(poolProgress, 2)}</span>/
+        <span className="value">5M</span> <span className="currency">sUSD</span>
       </PoolProgressText>
     </PoolProgressContainer>
   );
@@ -52,8 +53,12 @@ const PoolProgressText = styled.div`
   color: #787878;
   font-size: 12px;
 
-  span {
+  .value {
     color: #ece8e3;
+  }
+
+  .currency {
+    text-transform: initial;
   }
 `;
 
