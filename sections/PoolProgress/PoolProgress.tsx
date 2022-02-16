@@ -67,8 +67,7 @@ const ProgressContainer = styled.div`
   background-color: #1d1d1d;
   height: 20px;
   border-radius: 11px;
-  box-shadow: inset 0px -1px 0px rgba(255, 255, 255, 0.08),
-    inset 0px 7px 8px rgba(0, 0, 0, 0.25);
+  box-shadow: inset 0px 7px 8px rgba(0, 0, 0, 0.25);
   border: 1px solid rgba(255, 255, 255, 0.1);
   padding: 4px;
   margin-bottom: 10px;
