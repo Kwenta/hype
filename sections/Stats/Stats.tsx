@@ -14,7 +14,12 @@ const Stats = () => {
         mono
         align="left"
       />
-      <Stat value="5%" description="Of Total Supply" mono align="right" />
+      <Stat
+        value="5%"
+        description="Of Total Initial Supply"
+        mono
+        align="right"
+      />
       <Stat
         value="100m"
         description="sUSD VALUATION"
@@ -34,7 +39,6 @@ const StatsContainer = styled.div`
   @media screen and (max-width: 480px) {
     grid-gap: 15px;
   }
-  
 `;
 
 export default Stats;
