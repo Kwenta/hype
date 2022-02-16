@@ -28,12 +28,13 @@ const Button = styled.button<ButtonProps>`
   outline: none;
   white-space: nowrap;
   font-size: 17px;
+  border-style: solid;
 
   color: #ece8e3;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid #383737;
   background: linear-gradient(180deg, #282727 0%, #191818 100%);
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25),
-    inset 0px 1px 0px rgba(255, 255, 255, 0.08),
+    inset 0px 0.8px 0px #ffffff3d,
     inset 0px 0px 20px rgba(255, 255, 255, 0.03);
 
   &:hover {

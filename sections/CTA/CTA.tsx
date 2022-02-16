@@ -9,14 +9,14 @@ const CTA: React.FC = () => (
       target="_blank"
       rel="noreferrer"
     >
-      <Button variant="secondary">Learn More</Button>
+      <Button variant="secondary"><p>Learn More</p></Button>
     </a>
     <a
       href={`https://aelin.xyz/pools/${KWENTA_AELIN_POOL}`}
       target="_blank"
       rel="noreferrer"
     >
-      <Button variant="primary">Aelin Pool</Button>
+      <Button variant="primary"><p>Aelin Pool</p></Button>
     </a>
   </CTAContainer>
 );
@@ -32,6 +32,9 @@ const CTAContainer = styled.div`
 
   button {
     min-width: 157px;
+    p {
+      margin: 0 0 2.8px;
+    }
   }
 
   a:not(:last-of-type) {
