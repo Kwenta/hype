@@ -18,7 +18,7 @@ const MobileBottomBar = () => {
 
 const Container = styled.div`
   flex-direction: column;
-  padding: 20px 40px;
+  padding: 15px 40px 0;
   justify-content: center;
   align-items: center;
 
@@ -31,7 +31,7 @@ const PoweredBySynthetix = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 16px;
+  margin-bottom: 26px;
 
   p {
     margin: 0;
@@ -41,7 +41,6 @@ const PoweredBySynthetix = styled.div`
     letter-spacing: 0.64px;
     opacity: 0.5;
     text-align: center;
-    margin-bottom: 4px;
   }
 `;
 

@@ -81,7 +81,7 @@ const Disclaimer = styled.div`
   width: 100%;
 
   @media screen and (max-width: 480px) {
-    max-width: 300px;
+    max-width: 340px;
   }
 `;
 
