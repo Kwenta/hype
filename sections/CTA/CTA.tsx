@@ -24,10 +24,10 @@ const CTA: React.FC = () => (
 const CTAContainer = styled.div`
   display: flex;
   margin: 0 auto;
-  margin-bottom: 8px;
+  margin-bottom: 16px;
 
-  @media screen and (min-width: 480px) {
-    margin-bottom: 16px;
+  @media screen and (max-width: 480px) {
+   margin-bottom: 11px;
   }
 
   button {
@@ -36,6 +36,11 @@ const CTAContainer = styled.div`
 
   a:not(:last-of-type) {
     margin-right: 20px;
+
+    @media screen and (max-width: 480px) {
+     margin-right: 15px;
+    }
+
   }
 `;
 
