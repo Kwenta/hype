@@ -28,6 +28,12 @@ const IconsContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 24px);
   grid-gap: 45px;
+
+  
+  img:hover {
+    cursor: pointer;
+    filter: invert(24%) sepia(91%) saturate(211%) hue-rotate(349deg) brightness(100%) contrast(79%)
+}
 `;
 
 export default Icons;
