@@ -9,14 +9,18 @@ const CTA: React.FC = () => (
       target="_blank"
       rel="noreferrer"
     >
-      <Button variant="secondary"><p>Learn More</p></Button>
+      <Button variant="secondary">
+        <p>Learn More</p>
+      </Button>
     </a>
     <a
-      href={`https://aelin.xyz/pools/${KWENTA_AELIN_POOL}`}
+      href={`https://aelin.xyz/pools/${KWENTA_AELIN_POOL}/optimism`}
       target="_blank"
       rel="noreferrer"
     >
-      <Button variant="primary"><p>Aelin Pool</p></Button>
+      <Button variant="primary">
+        <p>Aelin Pool</p>
+      </Button>
     </a>
   </CTAContainer>
 );
@@ -27,7 +31,7 @@ const CTAContainer = styled.div`
   margin-bottom: 16px;
 
   @media screen and (max-width: 480px) {
-   margin-bottom: 11px;
+    margin-bottom: 11px;
   }
 
   button {
@@ -41,9 +45,8 @@ const CTAContainer = styled.div`
     margin-right: 20px;
 
     @media screen and (max-width: 480px) {
-     margin-right: 15px;
+      margin-right: 15px;
     }
-
   }
 `;
 
