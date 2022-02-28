@@ -1,15 +1,25 @@
 import React from "react";
 import styled from "styled-components";
-import usePoolBalancesQuery from "../../queries/usePoolBalancesQuery";
+import { ethers } from "ethers";
+import usePoolQuery from "../../queries/usePoolQuery";
 import { transformToMetric } from "../../utils/numbers";
+import { parsePool } from "../../utils/pools";
 
 const PoolProgress: React.FC = () => {
-  const poolBalancesQuery = usePoolBalancesQuery();
-  const poolBalances = poolBalancesQuery?.data ?? null;
+  const poolQuery = usePoolQuery();
+
+  const pool = React.useMemo(
+    () =>
+      (poolQuery?.data ?? null) != null ? parsePool(poolQuery.data) : null,
+    [poolQuery?.data]
+  );
 
   const poolProgress = React.useMemo(
-    () => poolBalances?.totalSupply ?? 0,
-    [poolBalances]
+    () =>
+      Number(
+        ethers.utils.formatUnits(pool?.contributions.toString() ?? "0", 18)
+      ),
+    [pool]
   );
 
   const poolProgressPercent = React.useMemo(() => {
