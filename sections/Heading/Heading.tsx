@@ -5,8 +5,8 @@ const Heading = () => (
     <Title>Kwenta</Title>
     <Title style={{ marginBottom: 15 }}>Community Raise</Title>
     <Description>
-      Fund the Kwenta DAO and receive vKWENTA, redeemable for KWENTA at launch
-      in April 2022.
+      You must claim your vKWENTA before Mar 1, 2022 at 7:58PM UTC, or withdraw
+      your funds.
     </Description>
   </>
 );
