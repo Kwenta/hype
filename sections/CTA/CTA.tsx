@@ -14,7 +14,7 @@ const CTA: React.FC = () => (
       </Button>
     </a>
     <a
-      href={`https://aelin.xyz/pools/${KWENTA_AELIN_POOL}/optimism`}
+      href={`https://app.aelin.xyz/pools/${KWENTA_AELIN_POOL}/optimism`}
       target="_blank"
       rel="noreferrer"
     >
