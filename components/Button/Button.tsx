@@ -86,7 +86,7 @@ const Button = styled.button<ButtonProps>`
   ${(props) =>
     props.variant === "secondary" &&
     css`
-      color: #c9975b;
+      color: #ece8e3;
     `};
 
   ${(props) =>
