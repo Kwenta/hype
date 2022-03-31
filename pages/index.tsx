@@ -16,8 +16,8 @@ const Home: NextPage = () => {
   return (
     <PageContainer>
       <Head>
-        <title>Kwenta Community Raise</title>
-        <meta name="description" content="Kwenta Community Raise" />
+        <title>Kwenta Futures Beta</title>
+        <meta name="description" content="Kwenta Futures Beta" />
         <link rel="icon" href="/favicon.ico" />
         <meta name="theme-color" content="#131212" />
       </Head>
