@@ -4,10 +4,9 @@ import Head from "next/head";
 import styled from "styled-components";
 
 import Heading from "../sections/Heading";
-import PoolProgress from "../sections/PoolProgress";
-import Stats from "../sections/Stats";
 import CTA from "../sections/CTA";
 import NeonIcon from "../components/NeonIcon";
+import Audit from "../components/Audit";
 import TopBar from "../sections/TopBar";
 import EdgeTexts from "../sections/EdgeTexts";
 import BottomBar from "../sections/BottomBar";
@@ -17,8 +16,8 @@ const Home: NextPage = () => {
   return (
     <PageContainer>
       <Head>
-        <title>Kwenta Community Raise</title>
-        <meta name="description" content="Kwenta Community Raise" />
+        <title>Kwenta Futures Beta</title>
+        <meta name="description" content="Kwenta Futures Beta" />
         <link rel="icon" href="/favicon.ico" />
         <meta name="theme-color" content="#131212" />
       </Head>
@@ -29,12 +28,11 @@ const Home: NextPage = () => {
       <StyledMain>
         <NeonIcon />
         <Heading />
-        <Stats />
-        <PoolProgress />
         <CTA />
+        <Audit />
         <Disclaimer>
-          You may need to switch your Metamask to the Optimism network for the
-          pool to be displayed correctly.
+          Note: This product is a work-in-progress. It is subject to open interest caps and code
+          changes. It should only be used to test the platform and not for active trading. 
         </Disclaimer>
         <MobileBottomBar />
       </StyledMain>
@@ -61,10 +59,10 @@ const PageContainer = styled.div`
 
 const StyledMain = styled.main`
   margin: 0 auto;
-  max-width: 600px;
+  max-width: 740px;
   height: 100%;
   width: 100%;
-  padding: 0 20px;
+  padding: 70px 20px 0px;
 
   display: flex;
   flex-direction: column;
@@ -73,12 +71,13 @@ const StyledMain = styled.main`
 `;
 
 const Disclaimer = styled.div`
-  font-size: 13px;
+  font-size: 14px;
   line-height: 15px;
-  color: #515151;
+  color: #87827c;
   text-align: center;
-  max-width: 370px;
+  max-width: 700px;
   width: 100%;
+  text-transform: uppercase;
 
   @media screen and (max-width: 480px) {
     max-width: 340px;

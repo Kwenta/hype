@@ -1,11 +1,10 @@
 import styled from "styled-components";
 import Button from "../../components/Button";
-import { KWENTA_AELIN_POOL } from "../../constants/addresses";
 
 const CTA: React.FC = () => (
   <CTAContainer>
     <a
-      href="https://docs.kwenta.io/tokenomics/sovereignty/aelin-raise"
+      href="https://docs.kwenta.io"
       target="_blank"
       rel="noreferrer"
     >
@@ -14,12 +13,12 @@ const CTA: React.FC = () => (
       </Button>
     </a>
     <a
-      href={`https://app.aelin.xyz/pools/${KWENTA_AELIN_POOL}/optimism`}
+      href="https://v2.beta.kwenta.io"
       target="_blank"
       rel="noreferrer"
     >
       <Button variant="primary">
-        <p>Aelin Pool</p>
+        <p>Futures Beta</p>
       </Button>
     </a>
   </CTAContainer>

@@ -2,11 +2,11 @@ import styled from "styled-components";
 
 const Heading = () => (
   <>
-    <Title>Kwenta</Title>
-    <Title style={{ marginBottom: 15 }}>Community Raise</Title>
+    <Title>Kwenta Beta</Title>
+    <Title style={{ marginBottom: 15 }}>Futures Launch</Title>
     <Description>
-      You must claim your vKWENTA before Mar 1, 2022 at 7:58PM UTC, or withdraw
-      your funds.
+      Trial trading Synthetic Futures with up to <br></br>
+      10x leverage on our Optimism mainnet beta launch.
     </Description>
   </>
 );
@@ -27,11 +27,11 @@ const Title = styled.h1`
 
 const Description = styled.p`
   margin-bottom: 32px;
-  font-size: 16px;
+  font-size: 20px;
   line-height: 20px;
   color: #787878;
   text-align: center;
-  max-width: 484px;
+  max-width: 500px;
   width: 100%;
 
   @media screen and (max-width: 480px) {

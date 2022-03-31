@@ -11,7 +11,7 @@ const BottomBar: React.FC = () => {
         <Image alt="Synthetix" src={synthetixLogo} />
       </PoweredBySynthetix>
       <OneOfSix>
-        <p>One<span> of Six</span></p>
+        <p>Two<span> of Six</span></p>
       </OneOfSix>
     </BottomBarContainer>
   );
